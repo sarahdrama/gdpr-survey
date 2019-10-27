@@ -1,0 +1,22 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+/* --- LINKS --- */
+a {
+  text-decoration: none;
+}
+
+a:focus {
+  outline: none;
+}
+
+/* --- DIALOG --- */
+.mat-dialog-container {
+  width: 60vw !important;
+}

@@ -1,0 +1,43 @@
+<h1 mat-dialog-title>What do we use cookies for?</h1>
+<div mat-dialog-content>
+  <p> This is a detailed text about the GDPR, what it is and what rights you have as a consumer. </p>
+  <p> Read more about cookies
+    <a (click)="onReadMore()" target="_blank" rel="noopener noreferrer" href="https://www.nytimes.com/subscription/dg-cookie-policy/output.html">here</a>.
+  </p>
+</div>
+
+<mat-accordion>
+  <mat-expansion-panel>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        Privacy settings
+      </mat-panel-title>
+      <mat-panel-description>
+        Customize your preferences
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+
+    <div class="option" *ngFor="let option of surveyStateService.getPrivacyOptions()">
+      <div class="option-header">
+        <div class="option-label">
+          {{option.label}}
+        </div>
+        <mat-slide-toggle
+          color="primary"
+          [(ngModel)]="option.isSelected"
+          [checked]="option.isSelected">
+        </mat-slide-toggle>
+      </div>
+      <div class="option-explanation">
+        {{option.explanation}}
+      </div>
+    </div>
+
+    <button mat-raised-button color="primary" (click)="onSave()">Save preferences</button>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<div mat-dialog-actions>
+  <button mat-stroked-button (click)="onCheckAll()">Agree to all</button>
+  <button mat-stroked-button (click)="onUncheckAll()">Disagree to all</button>
+</div>

@@ -1,0 +1,11 @@
+<h1 mat-dialog-title>Cookie Policy</h1>
+<div mat-dialog-content>
+  <p>Some explanation text.</p>
+  <p> Read more about cookies
+    <a (click)="onReadMore()" target="_blank" rel="noopener noreferrer" href="https://www.nytimes.com/subscription/dg-cookie-policy/output.html">here</a>.
+  </p>
+</div>
+
+<div mat-dialog-actions>
+  <button mat-raised-button color="primary" (click)="onAgree()">I Agree</button>
+</div>

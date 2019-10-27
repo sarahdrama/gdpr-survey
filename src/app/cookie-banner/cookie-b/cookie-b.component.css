@@ -1,0 +1,20 @@
+.option {
+  margin-bottom: 2em;
+}
+
+.option-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.option-label {
+  font-weight: bold;
+}
+
+div.mat-dialog-content {
+  margin-bottom: 1em;
+}
+
+div.mat-dialog-actions > button {
+  margin-right: 1em;
+}

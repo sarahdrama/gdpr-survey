@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.toolbar-title {
+  color: white;
+}
+
+.toolbar-img {
+  height: 40px;
+}

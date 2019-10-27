@@ -1,0 +1,23 @@
+.app {
+}
+
+.app-content > div {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.introduction {
+  width: 50%;
+  padding-top: 1em;
+}
+
+.introduction-text {
+  text-align: justify;
+}
+
+.survey-container {
+  margin: 1em;
+  }
+
+

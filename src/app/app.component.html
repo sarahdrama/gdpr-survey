@@ -1,0 +1,29 @@
+<div class="app">
+
+  <header></header>
+
+  <div class="app-content">
+
+    <div class="introduction" [hidden]="!formHidden">
+      <mat-card>
+        <mat-card-title>Welcome</mat-card-title>
+        <p class="introduction-text">
+          Thank you for participating in our survey.
+          <br>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
+          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <mat-card-actions>
+          <button mat-stroked-button color="primary" (click)="startSurvey()">Start Survey!</button>
+        </mat-card-actions>
+      </mat-card>
+    </div>
+
+  <div class="survey-container" [hidden]="formHidden">
+    <iframe class="survey" src="https://docs.google.com/forms/d/e/1FAIpQLScJZXgA9RHtUBfgUzQbCMbZHw4OW_r5asql_WqrBVdQpv_SxQ/viewform?embedded=true" width="700" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+  </div>
+
+  </div>
+</div>

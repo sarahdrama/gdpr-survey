@@ -1,0 +1,11 @@
+@import '~@angular/material/theming';
+@include mat-core();
+
+$gdpr-survey-primary: mat-palette($mat-blue);
+$gdpr-survey-accent: mat-palette($mat-grey, 800);
+$gdpr-survey-warn: mat-palette($mat-red);
+
+$gdpr-survey-theme: mat-light-theme($gdpr-survey-primary, $gdpr-survey-accent, $gdpr-survey-warn);
+
+@include angular-material-theme($gdpr-survey-theme);
+

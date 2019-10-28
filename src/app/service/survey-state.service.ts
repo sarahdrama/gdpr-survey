@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
+import * as $ from 'jquery'
 
 @Injectable({
   providedIn: 'root'
@@ -43,6 +44,6 @@ export class SurveyStateService {
         this.data[o.label] = o.isSelected;
       });
     }
-    this.http.post(this.api, this.data).toPromise();
+	$.post(this.api, JSON.stringify(this.data), null, 'json').then(s => {});
   }
 }

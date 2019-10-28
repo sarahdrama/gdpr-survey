@@ -8,6 +8,12 @@ export abstract class CookieBanner {
     public dialog: MatDialog ) {
   }
 
+  onSimpleAgree() {
+    this.surveyStateService.data.timeAgree = Date.now();
+    this.dialog.closeAll();
+    this.surveyStateService.submitCookie();
+  }
+
   onAgree() {
     this.surveyStateService.data.timeAgreeAll = Date.now();
     this.dialog.closeAll();

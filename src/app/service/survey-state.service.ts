@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class SurveyStateService {
 
-  api = 'http://localhost:52648/api/cookies';
+  api = 'https://cookiesurvey.azurewebsites.net/api/cookies';
   privacyOptions = [
     {
       id: 1,

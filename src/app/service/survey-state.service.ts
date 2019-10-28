@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class SurveyStateService {
 
-  api = 'https://cookiesurvey.azurewebsites.net/api/cookies';
+  api = 'http://localhost:52648/api/cookies';
   privacyOptions = [
     {
       id: 1,
@@ -29,7 +29,6 @@ export class SurveyStateService {
   ];
 
   data: { [ k: string ]: any } =  {
-    privacyOptions: this.privacyOptions
   };
 
   constructor( public http: HttpClient ) { }
@@ -39,15 +38,11 @@ export class SurveyStateService {
   }
 
   submitCookie() {
-    console.error('data to be sent', this.data);
-
-    const req = this.http.post(this.api, this.data).subscribe(
-      res => {
-        console.log(res);
-      },
-      err => {
-        console.log('Error occured');
-      }
-    );
+    if(this.data.batch === 'B') {
+      this.privacyOptions.forEach(o => {
+        this.data[o.label] = o.isSelected;
+      });
+    }
+    this.http.post(this.api, this.data).toPromise();
   }
 }

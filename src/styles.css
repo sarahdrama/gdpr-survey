@@ -4,12 +4,17 @@ html, body {
 
 body {
   margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  overflow-y: hidden;
+}
+
+body [class^='mat-'], body [class*=' mat-'] {
+  font-family: 'Google Sans', "Helvetica Neue", sans-serif !important;
 }
 
 /* --- LINKS --- */
 a {
-  text-decoration: none;
+  text-decoration: underline;
+  color: #00afb2;
 }
 
 a:focus {
@@ -19,4 +24,22 @@ a:focus {
 /* --- DIALOG --- */
 .mat-dialog-container {
   width: 60vw !important;
+  max-height: 50vh !important;
+}
+
+.mat-dialog-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.mat-dialog-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.mat-dialog-container::-webkit-scrollbar-thumb {
+  background: #e2e2e2;
+  border-radius: .5em;
+}
+
+.mat-dialog-container::-webkit-scrollbar-thumb:hover {
+  background: #888;
 }

@@ -1,7 +1,40 @@
 @import '~@angular/material/theming';
 @include mat-core();
 
-$gdpr-survey-primary: mat-palette($mat-blue);
+$dclead-theme: (
+  50 : #e0f5f6,
+  100 : #b3e7e8,
+  200 : #80d7d9,
+  300 : #4dc7c9,
+  400 : #26bbbe,
+  500 : #00afb2,
+  600 : #00a8ab,
+  700 : #009fa2,
+  800 : #009699,
+  900 : #00868a,
+  A100 : #b6fdff,
+  A200 : #83fbff,
+  A400 : #50f9ff,
+  A700 : #36f9ff,
+  contrast: (
+    50 : #000000,
+    100 : #000000,
+    200 : #000000,
+    300 : #000000,
+    400 : #000000,
+    500 : #ffffff,
+    600 : #ffffff,
+    700 : #ffffff,
+    800 : #ffffff,
+    900 : #ffffff,
+    A100 : #000000,
+    A200 : #000000,
+    A400 : #000000,
+    A700 : #000000,
+  )
+);
+
+$gdpr-survey-primary: mat-palette($dclead-theme);
 $gdpr-survey-accent: mat-palette($mat-grey, 800);
 $gdpr-survey-warn: mat-palette($mat-red);
 

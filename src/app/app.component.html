@@ -7,14 +7,11 @@
     <div class="introduction" [hidden]="!formHidden">
       <mat-card>
         <mat-card-title>Welcome</mat-card-title>
-        <p class="introduction-text">
-          Thank you for participating in our survey.
-          <br>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-          Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-        </p>
+        <mat-card-content class="introduction-text">
+          <p>Thank you for participating in our survey and helping us with our research on GDPR awareness.
+          We won't steal more than 10 minutes from you!</p>
+          <p>Please note that the survey is completely <span class="bold">anonymous</span> and the <span class="bold">questions are all mandatory</span>.</p>
+        </mat-card-content>
         <mat-card-actions>
           <button mat-stroked-button color="primary" (click)="startSurvey()">Start Survey!</button>
         </mat-card-actions>

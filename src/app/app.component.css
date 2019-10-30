@@ -7,8 +7,19 @@
   text-align: center;
 }
 
+@media only screen and (max-width: 1000px) {
+  .introduction {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1001px) {
+  .introduction {
+    width: 50%;
+  }
+}
+
 .introduction {
-  width: 50%;
   padding-top: 1em;
 }
 
@@ -18,6 +29,7 @@
 
 .survey-container {
   margin: 1em;
+
 }
 
 .survey {
@@ -25,21 +37,3 @@
   /* height of device - height of header - margins */
   height: calc(100vh - 64px - 1em - 12px);
 }
-
-.freebirdFormviewerViewEmbedded::-webkit-scrollbar {
-  width: 10px;
-}
-
-.freebirdFormviewerViewEmbedded::-webkit-scrollbar-track {
-  background: #f1f1f1;
-}
-
-.freebirdFormviewerViewEmbedded::-webkit-scrollbar-thumb {
-  background: #e2e2e2;
-  border-radius: .5em;
-}
-
-.freebirdFormviewerViewEmbedded::-webkit-scrollbar-thumb:hover {
-  background: #888;
-}
-

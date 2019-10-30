@@ -11,6 +11,27 @@ body [class^='mat-'], body [class*=' mat-'] {
   font-family: 'Google Sans', "Helvetica Neue", sans-serif !important;
 }
 
+/* --- TEXT STYLES --- */
+@media only screen and (max-width: 800px) {
+  p {
+    font-size: 13px;
+  }
+}
+
+@media only screen and (min-width: 801px) {
+  p {
+    font-size: 16px;
+  }
+}
+
+.bold {
+  font-weight: bold;
+}
+
+span.line-break {
+  margin: 1em;
+}
+
 /* --- LINKS --- */
 a {
   text-decoration: underline;
@@ -22,9 +43,20 @@ a:focus {
 }
 
 /* --- DIALOG --- */
+@media only screen and (max-width: 800px) {
+  .mat-dialog-container {
+    width: 80vw !important;
+  }
+}
+
+@media only screen and (min-width: 801px) {
+  .mat-dialog-container {
+    width: 60vw !important;
+  }
+}
+
 .mat-dialog-container {
-  width: 60vw !important;
-  max-height: 50vh !important;
+  max-height: 80vh !important;
 }
 
 .mat-dialog-container::-webkit-scrollbar {

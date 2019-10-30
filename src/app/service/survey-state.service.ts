@@ -7,6 +7,8 @@ import * as $ from 'jquery'
 })
 export class SurveyStateService {
 
+  cookiePolicy = 'https://www.cookiepolicygenerator.com/live.php?token=a7pnxzABKFlDo2aOzQJ7SDSRSK3uEDcF';
+
   api = 'https://cookiesurvey.azurewebsites.net/api/cookies';
   privacyOptions = [
     {
@@ -39,11 +41,13 @@ export class SurveyStateService {
   }
 
   submitCookie() {
+    /*
     if(this.data.batch === 'B') {
       this.privacyOptions.forEach(o => {
         this.data[o.label] = o.isSelected;
       });
     }
 	$.post(this.api, JSON.stringify(this.data), null, 'json').then(s => {});
+     */
   }
 }

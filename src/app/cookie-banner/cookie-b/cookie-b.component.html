@@ -9,8 +9,8 @@
   <p>Please take a moment to familiarize yourself with our cookie policy and customize privacy settings.</p>
 </div>
 
-<mat-accordion>
-  <mat-expansion-panel>
+<mat-accordion [@.disabled]="disableAnimation">
+  <mat-expansion-panel [expanded]="false">
     <mat-expansion-panel-header>
       <mat-panel-title>
         <p>Privacy settings</p>

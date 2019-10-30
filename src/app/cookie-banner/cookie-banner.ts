@@ -3,9 +3,15 @@ import {MatDialog} from '@angular/material';
 
 export abstract class CookieBanner {
 
+  disableAnimation = true;
+
   constructor(
     public surveyStateService: SurveyStateService,
     public dialog: MatDialog ) {
+  }
+
+  ngAfterViewInit() {
+    setTimeout(() => this.disableAnimation = false);
   }
 
   onSimpleAgree() {

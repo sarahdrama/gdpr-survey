@@ -3,10 +3,9 @@
   <p class="bold">What do we use cookies for?</p>
   <p>We use cookies on our website to collect information that helps us enhance your experience.
     The cookies that we use allow our website to work and help understand what information and advertising is most useful to visitors.</p>
-  <p> Read more about cookies
-    <a (click)="onReadMore()" target="_blank" rel="noopener noreferrer" [href]="surveyStateService.cookiePolicy">here</a>.
-  </p>
-  <p>Please take a moment to familiarize yourself with our cookie policy and customize privacy settings.</p>
+  <p>Please take a moment to familiarize yourself with our
+    <a (click)="onReadMore()" target="_blank" rel="noopener noreferrer" [href]="surveyStateService.cookiePolicy">cookie policy</a>
+    and the privacy settings below.</p>
 </div>
 
 <mat-accordion [@.disabled]="disableAnimation">
@@ -26,10 +25,13 @@
           {{option.label}}
         </p>
         <mat-slide-toggle
+          class="toggle"
           color="primary"
           [(ngModel)]="option.isSelected"
           [checked]="option.isSelected">
+          <mat-hint>{{ option.isSelected ? 'On' : 'Off' }}</mat-hint>
         </mat-slide-toggle>
+
       </div>
       <p class="option-explanation">
         {{option.explanation}}
@@ -41,6 +43,6 @@
 </mat-accordion>
 
 <div mat-dialog-actions>
-  <button mat-stroked-button (click)="onCheckAll()">Agree to all</button>
+  <button mat-stroked-button color="primary" (click)="onCheckAll()">Agree to all</button>
   <button mat-stroked-button (click)="onUncheckAll()">Disagree to all</button>
 </div>

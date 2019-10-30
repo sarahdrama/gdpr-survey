@@ -13,20 +13,30 @@ export class SurveyStateService {
   privacyOptions = [
     {
       id: 1,
-      label: 'Option 1',
-      explanation: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua',
+      label: 'Information storage and access',
+      explanation: 'The storage of information, or access to information that is already stored, on your device such as advertising identifiers, ' +
+        'device identifiers, cookies, and similar technologies.',
       isSelected: false
     },
     {
       id: 2,
-      label: 'Option 2',
-      explanation: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua',
+      label: 'Personalisation',
+      explanation: 'The collection and processing of information about your use of this service to subsequently personalise advertising ' +
+        'and/or content for you in other contexts, such as on other websites or apps, over time. ' +
+        'Typically, the content of the site or app is used to make inferences about your interests, which inform future selection of ' +
+        'advertising and/or content.',
       isSelected: false
     },
     {
       id: 3,
-      label: 'Option 3',
-      explanation: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua',
+      label: 'Something bad',
+      explanation: 'We will have access to your browser history.',
+      isSelected: false
+    },
+    {
+      id: 4,
+      label: 'Google',
+      explanation: 'Allow Google and their technology partners to collect data and use cookies for ad personalisation and measurement.',
       isSelected: false
     }
   ];

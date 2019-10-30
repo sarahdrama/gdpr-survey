@@ -11,7 +11,7 @@ import {
   MatCheckboxModule,
   MatDialog,
   MatDialogModule,
-  MatExpansionModule,
+  MatExpansionModule, MatFormFieldModule,
   MatSlideToggleModule,
   MatToolbarModule
 } from '@angular/material';
@@ -37,7 +37,8 @@ import { HeaderComponent } from './header/header.component';
     MatExpansionModule,
     MatSlideToggleModule,
     MatToolbarModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule
   ],
   entryComponents: [
     CookieAComponent,

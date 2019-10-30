@@ -11,6 +11,16 @@
   font-weight: bold;
 }
 
+@media only screen and (min-width: 1001px) {
+  .option-explanation {
+    padding-right: 3em;
+  }
+}
+
+.toggle {
+  align-self: center;
+}
+
 div.mat-dialog-content {
   margin-bottom: 1em;
 }

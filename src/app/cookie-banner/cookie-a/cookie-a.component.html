@@ -1,11 +1,7 @@
-<h1 mat-dialog-title>Cookie Policy</h1>
-<div mat-dialog-content>
-  <p>This site uses cookies. By clicking <span class="bold">"I Agree"</span>, you consent to the use of cookies.
+<p class="cookie-a">This site uses cookies.
   Read more about our
     <a (click)="onReadMore()" target="_blank" rel="noopener noreferrer" [href]="surveyStateService.cookiePolicy">cookie policy</a>.
-  </p>
-</div>
+  <button class="cookie-a" mat-button color="primary" (click)="onSimpleAgree()">I Agree</button>
+</p>
 
-<div mat-dialog-actions>
-  <button mat-raised-button color="primary" (click)="onSimpleAgree()">I Agree</button>
-</div>
+

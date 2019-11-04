@@ -12,8 +12,8 @@ export class CookieBComponent extends CookieBanner {
 
   constructor(
     public surveyStateService: SurveyStateService,
-    public dialog: MatDialog ) {
-      super(surveyStateService, dialog);
+    public dialog: MatDialog) {
+      super(surveyStateService );
   }
 
   onUncheckAll() {
@@ -28,6 +28,18 @@ export class CookieBComponent extends CookieBanner {
       option.isSelected = true;
     }
     this.onAgree();
+  }
+
+  onAgree() {
+    this.surveyStateService.data.timeAgreeAll = Date.now();
+    this.dialog.closeAll();
+    this.surveyStateService.submitCookie();
+  }
+
+  onDisagree() {
+    this.surveyStateService.data.timeDisagreeAll = Date.now();
+    this.dialog.closeAll();
+    this.surveyStateService.submitCookie();
   }
 
   onSave() {

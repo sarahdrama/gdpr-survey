@@ -1,5 +1,5 @@
-import {Component, ComponentFactoryResolver, OnInit} from '@angular/core';
-import {MatDialog} from '@angular/material';
+import {Component, OnInit} from '@angular/core';
+import {MatDialog, MatSnackBar} from '@angular/material';
 import {CookieBComponent} from './cookie-banner/cookie-b/cookie-b.component';
 import {CookieAComponent} from './cookie-banner/cookie-a/cookie-a.component';
 import {SurveyStateService} from './service/survey-state.service';
@@ -15,19 +15,18 @@ export class AppComponent implements OnInit {
 
   constructor(
     public surveyStateService: SurveyStateService,
-    public dialog: MatDialog) { }
+    public dialog: MatDialog,
+    public snackbar: MatSnackBar) { }
 
   ngOnInit() {
     this.surveyStateService.data.timeJoined = Date.now();
-    let batch;
     if (Math.floor(Math.random() * 2) === 0) {
-      batch = CookieAComponent;
       this.surveyStateService.data.batch = 'A';
+      this.snackbar.openFromComponent(CookieAComponent);
     } else {
-      batch = CookieBComponent;
       this.surveyStateService.data.batch = 'B';
+      this.dialog.open(CookieBComponent, { disableClose: true } );
     }
-    this.dialog.open(batch, { disableClose: true } );
   }
 
   startSurvey() {

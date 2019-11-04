@@ -12,7 +12,7 @@ import {
   MatDialog,
   MatDialogModule,
   MatExpansionModule, MatFormFieldModule,
-  MatSlideToggleModule,
+  MatSlideToggleModule, MatSnackBarModule,
   MatToolbarModule
 } from '@angular/material';
 import {SurveyStateService} from './service/survey-state.service';
@@ -38,7 +38,8 @@ import { HeaderComponent } from './header/header.component';
     MatSlideToggleModule,
     MatToolbarModule,
     MatCardModule,
-    MatFormFieldModule
+    MatFormFieldModule,
+    MatSnackBarModule
   ],
   entryComponents: [
     CookieAComponent,

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {SurveyStateService} from '../../service/survey-state.service';
-import {MatDialog} from '@angular/material';
+import {MatSnackBar} from '@angular/material';
 import {CookieBanner} from '../cookie-banner';
 
 @Component({
@@ -12,7 +12,13 @@ export class CookieAComponent extends CookieBanner {
 
   constructor(
     public surveyStateService: SurveyStateService,
-    public dialog: MatDialog ) {
-      super(surveyStateService, dialog);
+    public snackbar: MatSnackBar ) {
+      super(surveyStateService );
+  }
+
+  onSimpleAgree() {
+    this.surveyStateService.data.timeAgree = Date.now();
+    this.snackbar.dismiss();
+    this.surveyStateService.submitCookie();
   }
 }

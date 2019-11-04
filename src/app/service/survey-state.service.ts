@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import {HttpClient} from '@angular/common/http';
-import * as $ from 'jquery'
+import * as $ from 'jquery';
 
 @Injectable({
   providedIn: 'root'
@@ -51,13 +51,11 @@ export class SurveyStateService {
   }
 
   submitCookie() {
-    /*
-    if(this.data.batch === 'B') {
+    if (this.data.batch === 'B') {
       this.privacyOptions.forEach(o => {
         this.data[o.label] = o.isSelected;
       });
     }
-	$.post(this.api, JSON.stringify(this.data), null, 'json').then(s => {});
-     */
+    $.post(this.api, JSON.stringify(this.data), null, 'json').then(s => {});
   }
 }

@@ -7,8 +7,6 @@ import * as $ from 'jquery';
 })
 export class SurveyStateService {
 
-  cookiePolicy = 'https://www.cookiepolicygenerator.com/live.php?token=a7pnxzABKFlDo2aOzQJ7SDSRSK3uEDcF';
-
   api = 'https://cookiesurvey.azurewebsites.net/api/cookies';
   privacyOptions = [
     {
@@ -29,8 +27,9 @@ export class SurveyStateService {
     },
     {
       id: 3,
-      label: 'Something bad',
-      explanation: 'We will have access to your browser history.',
+      label: 'Identification',
+      explanation: 'The collection of data related to your identity, such as name, address, age, gender, bank details, transactions, family members ' +
+      'browsing history',
       isSelected: false
     },
     {
@@ -58,8 +57,7 @@ export class SurveyStateService {
     }
     if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
       this.data.device = 'mobile';
-    }
-    else {
+    } else {
       this.data.device = 'desktop';
     }
 

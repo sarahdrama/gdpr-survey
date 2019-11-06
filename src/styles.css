@@ -4,7 +4,7 @@ html, body {
 
 body {
   margin: 0;
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
 }
 
 body [class^='mat-'], body [class*=' mat-'] {

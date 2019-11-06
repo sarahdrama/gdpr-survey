@@ -1,26 +1,6 @@
 <div class="app">
-
-  <header></header>
-
+  <app-header></app-header>
   <div class="app-content">
-
-    <div class="introduction" [hidden]="!formHidden">
-      <mat-card>
-        <mat-card-title>Welcome</mat-card-title>
-        <mat-card-content class="introduction-text">
-          <p>Thank you for participating in our survey and helping us with our research on GDPR awareness.
-          We won't steal more than 10 minutes from you!</p>
-          <p>Please note that the survey is completely <span class="bold">anonymous</span> and the <span class="bold">questions are all mandatory</span>.</p>
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-stroked-button color="primary" (click)="startSurvey()">Start Survey!</button>
-        </mat-card-actions>
-      </mat-card>
-    </div>
-
-  <div class="survey-container" [hidden]="formHidden">
-    <iframe class="survey" src="https://docs.google.com/forms/d/e/1FAIpQLScJZXgA9RHtUBfgUzQbCMbZHw4OW_r5asql_WqrBVdQpv_SxQ/viewform?embedded=true" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-  </div>
-
+    <router-outlet></router-outlet>
   </div>
 </div>

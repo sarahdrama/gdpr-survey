@@ -18,6 +18,14 @@ import {
 import {SurveyStateService} from './service/survey-state.service';
 import {FormsModule} from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
+import { MainPageComponent } from './main-page/main-page.component';
+import { CookiePolicyComponent } from './cookie-policy/cookie-policy.component';
+
+import {RouterModule, Routes} from '@angular/router';
+const routes: Routes = [
+  { path: '', component: MainPageComponent },
+  { path: 'cookie-policy', component: CookiePolicyComponent }
+];
 
 @NgModule({
   declarations: [
@@ -25,6 +33,8 @@ import { HeaderComponent } from './header/header.component';
     CookieAComponent,
     CookieBComponent,
     HeaderComponent,
+    MainPageComponent,
+    CookiePolicyComponent
   ],
   imports: [
     BrowserModule,
@@ -39,7 +49,11 @@ import { HeaderComponent } from './header/header.component';
     MatToolbarModule,
     MatCardModule,
     MatFormFieldModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    RouterModule.forRoot(
+      routes,
+      {enableTracing: true} // <-- debugging purposes only
+    )
   ],
   entryComponents: [
     CookieAComponent,

@@ -58,7 +58,9 @@ const routes: Routes = [
   entryComponents: [
     CookieAComponent,
     CookieBComponent,
-    HeaderComponent
+    HeaderComponent,
+    MainPageComponent,
+    CookiePolicyComponent
   ],
   providers: [
     SurveyStateService

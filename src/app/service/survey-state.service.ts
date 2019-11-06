@@ -56,6 +56,13 @@ export class SurveyStateService {
         this.data[o.label] = o.isSelected;
       });
     }
+    if ( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+      this.data.device = 'mobile';
+    }
+    else {
+      this.data.device = 'desktop';
+    }
+
     $.post(this.api, JSON.stringify(this.data), null, 'json').then(s => {});
   }
 }

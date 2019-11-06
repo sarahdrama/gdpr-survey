@@ -1,0 +1,16 @@
+.cookie-policy {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.cookie-policy > div {
+  margin-top: 1em;
+}
+
+.cookie-policy > div:last-child {
+  margin-bottom: 1em;
+}
+
+.cookie-policy {
+  width: 80%;
+}

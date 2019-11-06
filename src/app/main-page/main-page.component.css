@@ -1,0 +1,36 @@
+.main-page > div {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+@media only screen and (max-width: 1000px) {
+  .introduction {
+    width: 70%;
+  }
+}
+
+@media only screen and (min-width: 1001px) {
+  .introduction {
+    width: 50%;
+  }
+}
+
+.introduction {
+  padding-top: 1em;
+}
+
+.introduction-text {
+  text-align: justify;
+}
+
+.survey-container {
+  margin: 1em;
+
+}
+
+.survey {
+  width: 90vw;
+  /* height of device - height of header - margins */
+  height: calc(100vh - 64px - 1em - 12px);
+}

@@ -50,10 +50,7 @@ const routes: Routes = [
     MatCardModule,
     MatFormFieldModule,
     MatSnackBarModule,
-    RouterModule.forRoot(
-      routes,
-      {enableTracing: true} // <-- debugging purposes only
-    )
+    RouterModule.forRoot( routes )
   ],
   entryComponents: [
     CookieAComponent,

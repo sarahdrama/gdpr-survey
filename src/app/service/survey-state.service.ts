@@ -14,7 +14,7 @@ export class SurveyStateService {
       label: 'Information storage and access',
       explanation: 'The storage of information, or access to information that is already stored, on your device such as advertising identifiers, ' +
         'device identifiers, cookies, and similar technologies.',
-      isSelected: false
+      isSelected: true
     },
     {
       id: 2,
@@ -23,20 +23,20 @@ export class SurveyStateService {
         'and/or content for you in other contexts, such as on other websites or apps, over time. ' +
         'Typically, the content of the site or app is used to make inferences about your interests, which inform future selection of ' +
         'advertising and/or content.',
-      isSelected: false
+      isSelected: true
     },
     {
       id: 3,
       label: 'Identification',
       explanation: 'The collection of data related to your identity, such as name, address, age, gender, bank details, transactions, family members ' +
       'browsing history',
-      isSelected: false
+      isSelected: true
     },
     {
       id: 4,
       label: 'Google',
       explanation: 'Allow Google and their technology partners to collect data and use cookies for ad personalisation and measurement.',
-      isSelected: false
+      isSelected: true
     }
   ];
 

@@ -28,7 +28,7 @@ export class SurveyStateService {
     {
       id: 3,
       label: 'Identification',
-      explanation: 'The collection of data related to your identity, such as name, address, age, gender, bank details, transactions, family members ' +
+      explanation: 'The collection of data related to your identity, such as name, address, age, gender, bank details, transactions, family members, ' +
       'browsing history',
       isSelected: true
     },

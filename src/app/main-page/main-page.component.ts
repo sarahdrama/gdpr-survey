@@ -20,16 +20,13 @@ export class MainPageComponent implements OnInit {
 
   ngOnInit() {
     this.surveyStateService.data.timeJoined = Date.now();
-    /* if (Math.floor(Math.random() * 2) === 0) {
+    if (Math.floor(Math.random() * 2) === 0) {
       this.surveyStateService.data.batch = 'A';
       this.snackbar.openFromComponent(CookieAComponent);
     } else {
       this.surveyStateService.data.batch = 'B';
       this.dialog.open(CookieBComponent, { disableClose: true } );
     }
-     */
-    this.surveyStateService.data.batch = 'A';
-    this.snackbar.openFromComponent(CookieAComponent);
   }
 
   startSurvey() {
